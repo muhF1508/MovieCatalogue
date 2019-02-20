@@ -2,7 +2,7 @@
 
 movie catalogue with API
 
-**__using__**</br></br>
+**__Using__**</br></br>
 
 **1. Repository Pattern**</br>
 **2. Room Persistence {SqLite}**</br>
@@ -12,7 +12,7 @@ movie catalogue with API
 **6. Localization**</br>
 
 
-**architecture**</br>
+**Architecture**</br>
 
 **1. MVP (model view presenter)**
 
