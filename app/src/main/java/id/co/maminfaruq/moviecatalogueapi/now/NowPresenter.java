@@ -24,7 +24,7 @@ public class NowPresenter implements NowContract.Presenter {
         view.showProgress();
         repository.getListMovie(context, new MovieDataSource.GetListMovieCallback() {
             @Override
-            public void onSucces(List<ResultsItemNow> data) {
+            public void onSuccess(List<ResultsItemNow> data) {
                 view.HideProgress();
                 view.showListMovie(data);
             }

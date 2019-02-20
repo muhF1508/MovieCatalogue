@@ -20,7 +20,7 @@ public class MovieRemoteDataSource implements MovieDataSource {
             @Override
             public void onResponse(Call<ResponseNow> call, Response<ResponseNow> response) {
                 if (response.body() != null){
-                    callback.onSucces(response.body().getResults());
+                    callback.onSuccess(response.body().getResults());
                 }
             }
 

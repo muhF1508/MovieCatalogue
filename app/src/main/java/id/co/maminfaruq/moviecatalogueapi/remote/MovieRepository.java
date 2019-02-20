@@ -28,11 +28,11 @@ public class MovieRepository implements MovieDataSource {
         NetworkInfo info = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
         movieDatabase = MovieDatabase.getMovieDatabase(context);
         if (movieDatabase.movieDao().select().size() != 0){
-            Toast.makeText(context, "Use database Local", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Use Database Local", Toast.LENGTH_SHORT).show();
             movieLocalDataSource.getListMovie(context, new GetListMovieCallback() {
                 @Override
-                public void onSucces(List<ResultsItemNow> data) {
-                    callback.onSucces(data);
+                public void onSuccess(List<ResultsItemNow> data) {
+                    callback.onSuccess(data);
                 }
 
                 @Override
@@ -42,11 +42,11 @@ public class MovieRepository implements MovieDataSource {
             });
 
         }else if (info != null && info.isConnected()){
-            Toast.makeText(context, "Use database cloud", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Use Database cloud", Toast.LENGTH_SHORT).show();
             remoteDataSource.getListMovie(context, new GetListMovieCallback() {
                 @Override
-                public void onSucces(List<ResultsItemNow> data) {
-                    callback.onSucces(data);
+                public void onSuccess(List<ResultsItemNow> data) {
+                    callback.onSuccess(data);
                     movieDatabase.movieDao().insert(data);
                 }
 
@@ -56,7 +56,7 @@ public class MovieRepository implements MovieDataSource {
                 }
             });
         }else {
-            callback.onSucces(null);
+            callback.onSuccess(null);
             callback.onFailed("");
         }
     }

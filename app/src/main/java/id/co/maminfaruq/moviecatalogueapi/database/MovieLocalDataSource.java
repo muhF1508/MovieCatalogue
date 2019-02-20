@@ -9,7 +9,7 @@ public class MovieLocalDataSource implements MovieDataSource {
     public void getListMovie(Context context, GetListMovieCallback callback) {
         MovieDatabase movieDatabase = MovieDatabase.getMovieDatabase(context);
         if (movieDatabase.movieDao().select() != null){
-            callback.onSucces(movieDatabase.movieDao().select());
+            callback.onSuccess(movieDatabase.movieDao().select());
         }else {
             callback.onFailed("No database");
         }

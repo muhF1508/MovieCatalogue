@@ -11,7 +11,7 @@ public interface MovieDataSource {
     void getListMovie(Context context, GetListMovieCallback callback);
 
     interface GetListMovieCallback{
-        void onSucces(List<ResultsItemNow> data);
+        void onSuccess(List<ResultsItemNow> data);
         void onFailed(String errorMessage);
     }
 }
