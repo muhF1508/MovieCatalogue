@@ -16,11 +16,11 @@ movie catalogue with API
 **__Architecture__**
 </br>
 **1. MVP (model view presenter)**
-
+</br>
+</br>
 
 **__Preview__**
-</br>
-</br>
+
 <p align="center">
   <img src="https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634200.png" width="350" title="hover text">
   <img src="https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634222.png" width="350" alt="accessibility text">
