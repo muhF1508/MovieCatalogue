@@ -18,4 +18,8 @@ movie catalogue with API
 
 
 **__Preview__**
-![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634200.png) ![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634222.png) ![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634267.png) 
+<p align="center">
+  <img src="https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634200.png" width="350" title="hover text">
+  <img src="https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634222.png" width="350" alt="accessibility text">
+  <img src="https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634267.png" width="350" alt="accessibility text">
+</p>
