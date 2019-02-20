@@ -3,18 +3,20 @@ Submission 3 dicoding
 
 movie catalogue with API
 
-**Using**
-**1. Repository Pattern**
-**2. Room Persistence {SqLite}**
-**3. Recyclerview**
-**4. Retrofit**
-**5. Bundle**
-**6. Localization**
+**__using__**</br></br>
+
+**1. Repository Pattern**</br>
+**2. Room Persistence {SqLite}**</br>
+**3. Recyclerview**</br>
+**4. Retrofit**</br>
+**5. Bundle**</br>
+**6. Localization**</br>
 
 
-architecture
-1. MVP (model view presenter)
+**architecture**</br>
+
+**1. MVP (model view presenter)**
 
 
 **__Preview__**
-![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634200.png)
+![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634200.png) ![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634222.png) ![alt text](https://github.com/aminfaruq/MovieCatalogue/blob/master/app/src/main/res/drawable/Screenshot_1550634267.png) 
