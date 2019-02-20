@@ -1,5 +1,4 @@
 # MovieCatalogue
-Submission 3 dicoding 
 
 movie catalogue with API
 
