@@ -36,7 +36,6 @@ public class NowPlayingFragment extends Fragment implements NowContract.View{
 
     SwipeRefreshLayout swipeRefreshLayoutNow;
     RecyclerView recyclerView;
-    NowAdapter adapter;
 
     private final NowPresenter nowPresenter = new NowPresenter(this,Injection.provideRepository());
 

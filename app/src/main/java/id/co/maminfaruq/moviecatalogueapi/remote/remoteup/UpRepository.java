@@ -11,14 +11,14 @@ import id.co.maminfaruq.moviecatalogueapi.database.MovieDatabase;
 import id.co.maminfaruq.moviecatalogueapi.database.MovieUpLocalDataSource;
 import id.co.maminfaruq.moviecatalogueapi.model2.ResultsItem;
 
-public class UpRepository implements UpDataSource{
-    private final UpRemoteDataSource remoteDataSource;
-    private final MovieUpLocalDataSource movieLocalDataSource;
+public class UpRepository implements UpDataSource {
+    private final UpRemoteDataSource upRemoteDataSource;
+    private final MovieUpLocalDataSource movieUpLocalDataSource;
     private MovieDatabase movieDatabase;
 
-    public UpRepository(UpRemoteDataSource remoteDataSource, MovieUpLocalDataSource movieLocalDataSource) {
-        this.remoteDataSource = remoteDataSource;
-        this.movieLocalDataSource = movieLocalDataSource;
+    public UpRepository(UpRemoteDataSource upRemoteDataSource, MovieUpLocalDataSource movieUpLocalDataSource) {
+        this.upRemoteDataSource = upRemoteDataSource;
+        this.movieUpLocalDataSource = movieUpLocalDataSource;
     }
 
 
@@ -27,8 +27,8 @@ public class UpRepository implements UpDataSource{
         NetworkInfo info = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
         movieDatabase = MovieDatabase.getMovieDatabase(context);
         if (movieDatabase.movieDao().selectUp().size() != 0){
-            Toast.makeText(context, "Use database Local", Toast.LENGTH_SHORT).show();
-            movieLocalDataSource.getListMovieUp(context, new GetListUpCallback() {
+            Toast.makeText(context, "Use Database Local", Toast.LENGTH_SHORT).show();
+            movieUpLocalDataSource.getListMovieUp(context, new GetListUpCallback() {
                 @Override
                 public void onSuccess(List<ResultsItem> data) {
                     callback.onSuccess(data);
@@ -40,8 +40,8 @@ public class UpRepository implements UpDataSource{
                 }
             });
         }else if (info != null && info.isConnected()){
-            Toast.makeText(context, "Use database cloud", Toast.LENGTH_SHORT).show();
-            remoteDataSource.getListMovieUp(context, new GetListUpCallback() {
+            Toast.makeText(context, "Use Database Cloud", Toast.LENGTH_SHORT).show();
+            upRemoteDataSource.getListMovieUp(context, new GetListUpCallback() {
                 @Override
                 public void onSuccess(List<ResultsItem> data) {
                     callback.onSuccess(data);
@@ -53,6 +53,10 @@ public class UpRepository implements UpDataSource{
                     callback.onFailed(errorMessage);
                 }
             });
+        }else {
+            callback.onSuccess(null);
+            callback.onFailed("");
         }
+
     }
 }

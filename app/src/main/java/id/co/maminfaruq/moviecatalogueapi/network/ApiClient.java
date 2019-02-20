@@ -1,6 +1,5 @@
 package id.co.maminfaruq.moviecatalogueapi.network;
 
-import id.co.maminfaruq.moviecatalogueapi.utils.Constans;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

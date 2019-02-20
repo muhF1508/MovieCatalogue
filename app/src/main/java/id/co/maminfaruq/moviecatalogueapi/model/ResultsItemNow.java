@@ -29,22 +29,9 @@ public class ResultsItemNow {
 	@SerializedName("original_title")
 	private String originalTitle;
 
-//	@SerializedName("video")
-//	private boolean video;
-
-//	@ColumnInfo(name = "title")
-//	@SerializedName("title")
-//	private String title;
-
-//	@SerializedName("genre_ids")
-//	private List<Integer> genreIds;
-
 	@ColumnInfo(name = "poster_path")
 	@SerializedName("poster_path")
 	private String posterPath;
-
-//	@SerializedName("backdrop_path")
-//	private String backdropPath;
 
 	@ColumnInfo(name = "release_date")
 	@SerializedName("release_date")
@@ -53,13 +40,6 @@ public class ResultsItemNow {
 	@ColumnInfo(name = "vote_average")
 	@SerializedName("vote_average")
 	private double voteAverage;
-
-//	@SerializedName("popularity")
-//	private double popularity;
-
-
-//	@SerializedName("adult")
-//	private boolean adult;
 
 	@ColumnInfo(name = "vote_count")
 	@SerializedName("vote_count")

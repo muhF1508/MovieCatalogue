@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import id.co.maminfaruq.moviecatalogueapi.Injection;
 import id.co.maminfaruq.moviecatalogueapi.R;
+import id.co.maminfaruq.moviecatalogueapi.adapter.NowAdapter;
 import id.co.maminfaruq.moviecatalogueapi.adapter.UpAdapter;
 import id.co.maminfaruq.moviecatalogueapi.model2.ResultsItem;
 import id.co.maminfaruq.moviecatalogueapi.up.UpContract;
@@ -56,6 +57,7 @@ public class UpcomingFragment extends Fragment implements UpContract.View {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
         upPresenter.getMovie(getActivity());
         initAdapter();
         swipeRefreshUp.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -69,9 +71,13 @@ public class UpcomingFragment extends Fragment implements UpContract.View {
     private void initAdapter() {
         rvUp.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvUp.setHasFixedSize(true);
-        rvUp.setAdapter(new UpAdapter(getContext(), resultsItemList));
+        rvUp.setAdapter(new UpAdapter(getContext(),resultsItemList));
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 
     @Override
     public void showProgress() {
