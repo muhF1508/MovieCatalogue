@@ -11,7 +11,7 @@ public interface DetailContractNow {
         void showDataSingleMovie(ResultsItemNow resultsItemNow);
         void ShowFailureMessage(String msg);
     }
-
+// dnwuidhwebfeuybfyeuqbdeuqyvwuywqwuyq
     interface Presenter{
         void getDetail(Bundle bundle);
     }
